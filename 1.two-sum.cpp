@@ -29,6 +29,15 @@ public:
 // @lc code=end
 
 //optimal solution
+
+/**
+ * @brief Use Hash table for constant lookup time. Key => Each element. Values => Index corresponding to the element.
+ * Loop through the array once
+ * In each pass of element, check to see if target minus current element exists in hash table.
+ * If it exists, solution is current index and index of taget - arr[i] (stored in value field of hash table).
+ * If it does not exist, add index of current element to current element key in hash table.
+ * 
+ */
 class Solution {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
